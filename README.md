@@ -20,6 +20,8 @@
 
 ## Instalación
 
+### Opción A - Usando directamente `npm start`
+
 Clona el repositorio e ingresa a la carpeta
 
 ``` bash
@@ -37,6 +39,33 @@ Inicia el servidor de desarrollo de Ionic
 
 ``` bash
 npm start
+```
+
+### Opción B - Usando Ionic mediante dependencias de globales de Angular
+
+Clona el repositorio e ingresa a la carpeta
+
+``` bash
+git clone https://github.com/Marfullsen/PR-appCompletos.git appCompletos
+cd appCompletos
+```
+
+Instala las dependencias necesarias
+
+``` bash
+npm install
+```
+
+Adicionalmente instala Ionic de manera global
+
+``` bash
+npm install -g @ionic/cli
+```
+
+Inicia el servidor de desarrollo de Ionic
+
+``` bash
+ionic serve
 ```
 
 Deberías automáticamente ser redirigido al sitio web, de no ser así ve al sitio que se indique en la consola, por defecto es:
