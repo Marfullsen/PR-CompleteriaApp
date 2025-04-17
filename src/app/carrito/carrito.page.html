@@ -1,0 +1,66 @@
+<ion-content [fullscreen]="true">
+  <!-- Card de bienvenida -->
+  <div class="image-container">
+    <img src="assets/img/carrito-de-compras.png" alt="Carrito de Compras">
+  </div>
+
+  <!-- Card con la lista de productos en el carrito -->
+  <ion-card *ngIf="carrito.length > 0">
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let p of carrito">
+          <!-- Imagen del producto -->
+          <ion-thumbnail slot="start">
+            <img [src]="p.imageUrl" alt="Imagen de {{ p.nombre }}">
+          </ion-thumbnail>
+          
+          <!-- Información del producto -->
+          <ion-label>
+            <h2><strong>{{ p.nombre }}</strong></h2>
+            <br>
+            <h3><strong>{{ p.precio | currency:'CLP' }}</strong></h3>
+            
+            <!-- Botones de acción -->
+            <div class="action-buttons">
+              <ion-button color="danger" (click)="removeProduct(p)">
+                <ion-icon name="close-circle"></ion-icon>
+              </ion-button>
+              
+              <ion-button (click)="decreaseProduct(p)" [disabled]="p.cantidad <= 1">
+                <ion-icon name="remove-circle"></ion-icon>
+              </ion-button>
+              
+              <span>{{ p.cantidad }}</span>
+              
+              <ion-button (click)="increaseProduct(p)">
+                <ion-icon name="add-circle"></ion-icon>
+              </ion-button>
+            </div>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <!-- Card con el total de la compra -->
+      <ion-card *ngIf="carrito.length > 0" id="cardTotalCompra">
+        <ion-card-content>
+          <ion-item>
+            <ion-label><strong>Total: {{ total | currency:'CLP' }}</strong></ion-label>
+          </ion-item>
+        </ion-card-content>
+        <!-- Botón de finalizar compra -->
+        <ion-button 
+          expand="full" 
+          [disabled]="carrito.length === 0" (click)="finalizarCompra()" 
+          id="btnComprar"
+        >
+          Finalizar Compra
+        </ion-button>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Mensaje si el carrito está vacío -->
+  <div *ngIf="carrito.length === 0" class="empty-cart-message">
+    <h2 id="txtCarritoVacio">Tu carrito está vacío</h2>
+  </div>
+</ion-content>

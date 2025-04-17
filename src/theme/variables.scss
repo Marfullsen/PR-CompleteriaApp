@@ -1,0 +1,16 @@
+// For information on how to create your own theme, please see:
+// http://ionicframework.com/docs/theming/
+@font-face {
+    font-family: 'Dekko-Regular';
+    src: url('../assets/fonts/Dekko-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothicA1-Regular';
+    src: url('../assets/fonts/GothicA1-Regular.ttf') format('truetype');
+}
+  
+
+ion-content {
+    --background: #e9dfd1; /* Cambia el color del fondo de la app */
+}

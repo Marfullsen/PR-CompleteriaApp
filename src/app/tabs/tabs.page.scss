@@ -1,0 +1,75 @@
+/* ### CONFIGURACIÓN GENERAL ### */
+ion-tab-bar, ion-tab-button {
+    background-color: #351512;
+    --ripple-color: white; /* Color del efecto de ondulación al presionar un botón */
+}
+
+
+/* ### CONFIGURACIÓN BOTÓN DE INICIO ### */
+.placeholder-home-tab {
+    flex: 1; /* Toma el espacio en lugar del botón de Inicio */
+}
+  
+.home-button-container {
+    position: absolute;
+    bottom: 5px; /* Ajusta la posición del contenedor para que esté centrado sobre la barra */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #351512; /* Color del tab */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Hacer el contenedor circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10; /* Asegura que esté por encima de los demás elementos */
+    transition: color 0.3s, transform 0.3s;
+}
+  
+.home-button {
+    background-color: #351512;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Hacer el botón circular */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7); /* Sombra para que destaque */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    border: 1px solid #bbbbbb;
+    transition: background-color 0.3s, transform 0.3s;
+}
+  
+.home-button ion-icon {
+    font-size: 30px;
+    color: #bbbbbb;
+    transition: color 0.3s, transform 0.3s;
+}
+  
+.home-button-container.active-home .home-button {
+    background-color: white; /* Fondo del botón activo */
+    border-color: white; /* Borde blanco cuando está activo */
+}
+  
+.home-button-container.active-home .home-button ion-icon {
+    color: #351512; /* Cambia el ícono a blanco cuando está activo */
+}
+
+/* ### CONFIGURACIÓN RESTO DE BOTONES ### */
+ion-tab-button {
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #351512;
+}
+  
+ion-tab-button ion-icon {
+    color: #bbbbbb;
+}
+  
+ion-tab-button:hover ion-icon,
+  .active-tab ion-icon {
+    color: white;
+}
+
+.active-tab ion-icon {
+    color: white;
+}

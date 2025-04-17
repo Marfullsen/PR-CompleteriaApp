@@ -1,0 +1,52 @@
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nuevo Producto</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input [(ngModel)]="newProduct.name" name="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Precio</ion-label>
+        <ion-input type="number" [(ngModel)]="newProduct.price" name="price" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Descripción</ion-label>
+        <ion-input [(ngModel)]="newProduct.description" name="description"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">URL Imagen</ion-label>
+        <ion-input [(ngModel)]="newProduct.imageUrl" name="imageUrl"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" (click)="addProduct()">Agregar Producto</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- 🔹 LISTADO DE PRODUCTOS -->
+  <ion-list>
+    <ion-item *ngFor="let product of products">
+      <ion-label>
+        <img *ngIf="product.imageUrl" [src]="product.imageUrl" alt="Product Image" />
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <p><strong>${{ product.price }}</strong></p>
+      </ion-label>
+      <ion-button fill="clear" color="primary" (click)="openEditModal(product)">
+        Editar
+      </ion-button>
+      <ion-button fill="clear" color="danger" (click)="deleteProduct(product.id)">
+        Eliminar
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" color="medium" (click)="logout()">
+    Cerrar Sesión
+  </ion-button>
+
+</ion-content>

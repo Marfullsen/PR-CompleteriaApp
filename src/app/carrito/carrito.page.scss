@@ -1,0 +1,60 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.image-container img {
+    max-width: 110%;
+    height: auto;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+  
+.action-buttons ion-button {
+    margin: 0 5px;
+}
+  
+.empty-cart-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+ion-card {
+    border-radius: 20px;
+}
+
+ion-thumbnail {
+    margin-right: 15px; /* Da espacio entre la imagen y el texto */
+    width: 100px;  /* Ajusta este valor para agrandar la miniatura */
+    height: 100px; /* Ajusta este valor para agrandar la miniatura */
+}
+
+ion-thumbnail img {
+    width: 100%;   /* Asegura que la imagen ocupe todo el contenedor del thumbnail */
+    height: 100%;  /* Asegura que la imagen ocupe todo el contenedor del thumbnail */
+    object-fit: cover; /* Mantiene la proporción de la imagen mientras ocupa el contenedor */
+}
+
+h2, h3, span {
+    font-family: 'GothicA1-Regular', sans-serif; /* Asegúrate de que 'Adelina' esté disponible */
+    color: #351512; /* Cambia esto al color que prefieras */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas para mayor legibilidad */
+}
+
+#txtCarritoVacio {
+    font-family: 'GothicA1-Regular', sans-serif; /* Asegúrate de que 'Adelina' esté disponible */
+    color: #636363; /* Cambia esto al color que prefieras */
+    font-size: 24px; /* Tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas para mayor legibilidad */
+}

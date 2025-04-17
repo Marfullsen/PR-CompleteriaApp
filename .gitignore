@@ -1,0 +1,56 @@
+# Node modules
+node_modules/
+
+# Angular and Ionic build output
+dist/
+www/
+
+# IDE and editor files
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Environment files
+.env
+.env.*
+
+# Logs
+logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Angular CLI cache
+.angular/
+
+# Ionic CLI cache
+.ionic/
+
+# Build artifacts
+*.apk
+*.ipa
+*.aab
+
+# Coverage reports
+coverage/
+
+# Test results
+test-results/
+
+# Local development files
+*.local
+*.local.json
+
+# Angular and Ionic specific files
+*.tsbuildinfo
+*.tslint.json
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

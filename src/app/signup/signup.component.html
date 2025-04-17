@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="image-container">
+    <img src="assets/img/bienvenida-cumpleteria.png" alt="Bienvenido a la Cumpletería">
+  </div>
+  <div class="login-container">
+    <ion-card class="login-card">
+      <ion-card-header>
+        <ion-card-title>Crear Cuenta</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="login-info">
+          <h2>Regístrate</h2>
+          <input type="text" placeholder="Nombre" [(ngModel)]="name" />
+          <input type="email" placeholder="Correo Electrónico" [(ngModel)]="email" />
+          <input type="password" placeholder="Contraseña" [(ngModel)]="password" />
+          <input type="text" placeholder="Dirección" [(ngModel)]="address" />
+          <button class="login-button" (click)="signup()">Crear Cuenta</button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <div class="login-footer">
+      <p>¿Ya tienes una cuenta? <ion-button expand="full" (click)="navigateToLogin()">Iniciar Sesión</ion-button></p>
+    </div>
+  </div>
+</ion-content>

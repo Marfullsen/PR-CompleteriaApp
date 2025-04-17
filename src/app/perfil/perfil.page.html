@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="true">
+  <div class="profile-container">
+    <!-- Tarjeta de perfil -->
+    <div class="avatar-container">
+      <ion-avatar (click)="selectImage()">
+        <img *ngIf="profileImage; else defaultImage" [src]="profileImage" />
+        <ng-template #defaultImage>
+          <img src="assets/img/default-avatar.png" alt="Avatar por defecto" />
+        </ng-template>
+      </ion-avatar>
+    </div>
+    <ion-card class="profile-card">
+      <ion-card-header>
+        <ion-card-title>Perfil</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <div class="profile-info">
+          <input [(ngModel)]="nombreUsuario" readonly />
+          <input [(ngModel)]="correoElectronico" readonly />
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Tarjeta de opciones -->
+    <ion-card class="options-card">
+      <ion-card-title class="titulo-pequeno">
+        Puntos Acumulados: {{ puntosAcumulados | number:'1.0-2' }} puntos
+      </ion-card-title>
+      <ion-card-title class="titulo-pequeno">Dirección:</ion-card-title>
+      <ion-card-header>
+        <input [(ngModel)]="direccion" readonly />
+      </ion-card-header>
+    </ion-card>
+  </div>
+  <ion-button expand="full" color="medium" (click)="logout()">
+    Cerrar Sesión
+  </ion-button>
+</ion-content>

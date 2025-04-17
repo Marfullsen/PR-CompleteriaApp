@@ -1,0 +1,58 @@
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+  
+.image-container img {
+    max-width: 110%;
+    height: auto;
+}
+
+#imgCanjea_tus_pts{
+    max-width: 65%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+}
+#imgContactanos{
+    max-width: 65%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+#imgContacto{
+    max-width: 25%;
+    height: auto;
+    margin-top: -100px;
+    margin-left: 40px;
+}
+
+ion-card-content p {
+    font-family: 'GothicA1-Regular', sans-serif; /* Asegúrate de que 'Adelina' esté disponible */
+    color: #351512; /* Cambia esto al color que prefieras */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas para mayor legibilidad */
+}
+  
+#text-card {
+    background-color: #e9dfd1;
+}
+#text-card2 {
+    background-color: #e9dfd1;
+    margin-left: 180px;
+}
+#imgCanjea_aqui{
+    max-width: 65%;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}

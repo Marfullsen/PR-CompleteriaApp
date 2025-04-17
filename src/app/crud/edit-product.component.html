@@ -1,0 +1,32 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Editar Producto</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeModal()">Cerrar</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input [(ngModel)]="product.name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Descripción</ion-label>
+        <ion-textarea [(ngModel)]="product.description"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Precio</ion-label>
+        <ion-input type="number" [(ngModel)]="product.price"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Imagen URL</ion-label>
+        <ion-input [(ngModel)]="product.imageUrl"></ion-input>
+      </ion-item>
+    </ion-list>
+  
+    <ion-button expand="full" color="success" (click)="saveChanges()">Guardar Cambios</ion-button>
+  </ion-content>
+  

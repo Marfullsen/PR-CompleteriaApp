@@ -1,0 +1,56 @@
+ion-list {
+    background-color: #e9dfd1;
+}
+
+.producto-info p, .producto-info h2, .producto-info h3 {
+    font-family: 'GothicA1-Regular', sans-serif; /* Asegúrate de que 'Adelina' esté disponible */
+    color: #351512; /* Cambia esto al color que prefieras */
+    font-size: 16px; /* Tamaño de la fuente */
+    line-height: 1.5; /* Espaciado entre líneas para mayor legibilidad */
+}
+.producto-info p {
+    color: #636363; 
+    font-size: 14px;
+}
+
+#imgNuestroMenu {
+    max-width: 65%;
+    height: auto;
+}
+
+.image-info-container {
+    margin-top: 10px;
+}
+
+/* Estilo para mantener la imagen y el texto alineados con el botón debajo del texto */
+.producto-info {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+}
+
+ion-thumbnail {
+    margin-right: 15px; /* Da espacio entre la imagen y el texto */
+    width: 100px;  /* Ajusta este valor para agrandar la miniatura */
+    height: 100px; /* Ajusta este valor para agrandar la miniatura */
+}
+
+ion-thumbnail img {
+    width: 100%;   /* Asegura que la imagen ocupe todo el contenedor del thumbnail */
+    height: 100%;  /* Asegura que la imagen ocupe todo el contenedor del thumbnail */
+    object-fit: cover; /* Mantiene la proporción de la imagen mientras ocupa el contenedor */
+}
+
+ion-button {
+    font-family: 'GothicA1-Regular', sans-serif; /* Asegúrate de que 'Adelina' esté disponible */
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Alinea el botón al principio del contenedor */
+}
+
+ion-card {
+    border-radius: 20px;
+}
